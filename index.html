@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Score Board</title>
+</head>
+
+<body>
+    <div class="card">
+        <div id="scoreBoard"></div>
+        <script src="main.js"></script>
+        <div class="inputs">
+            <label for="player">Player:</label>
+            <input id="player" type="text" name="player">
+            <label for="score">Score:</label>
+            <input id="score" type="text" name="score">
+            <button onclick="submit()">Add Player</button>
+        </div>
+    </div>
+    <p class="card" id="errorMessage"><br></p>
+    <p class="card" id="help">
+        <i>Instructions for the table.</i> You can add more players for the table by giving a player name, score and clicking the button <i>'Add Player'</i>. 
+        If you want to add more points for the player, you can click a row where player is, and it opens a input box for that. By clicking the headings PlAYER or SCORE, table is sorted in ascending or descending orders.
+    </p>
+    <style>
+        th:hover {
+            cursor: pointer;
+            color: lightblue;
+        }
+
+        tr:hover {
+            background-color: lightblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border-bottom: 1px solid #ddd;
+            margin: 0px;
+            padding: 5px;
+        }
+        th {
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+        }
+
+        .card {
+            width: 50%;
+            margin: auto
+        }
+
+        .inputs {
+            text-align: center;
+            width: 100%;
+            margin: auto;
+        }
+        .inputCard {
+            display: inline-block;
+            background-color: lightblue;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+        #errorMessage {
+            color: red;
+            text-align: center;
+        }
+        #heading_player {
+            text-align: left;
+        }
+        #heading_score {
+            text-align: right;
+        }
+
+       
+    </style>
+</body>
+
+</html>
